@@ -1,40 +1,65 @@
-# Next.js & NextUI Template
+<h1 align="center">
+  INTACT Linkedin Frontend Clone
+  <br>
+</h1>
 
-This is a template for creating applications using Next.js 13 (app directory) and NextUI (v2).
+<h4 align="center">A Linkedin Fronted Clone Build with <a href="https://nextjs.org/" target="_blank">NEXTJS</a>.</h4>
 
-## Technologies Used
+<div>
 
-- [Next.js 13](https://nextjs.org/docs/getting-started)
-- [NextUI v2](https://nextui.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [next-themes](https://github.com/pacocoursey/next-themes)
+<p align="center">
+  <a href="#key-features">Key Features</a> •
+  <a href="#how-to-use">How To Use</a> •
+</p>
 
-## How to Use
+## STATUS: WORK IN PROGRESS!
 
+---
 
-### Use the template with create-next-app
+### **Overview:**
 
-To create a new project based on this template using `create-next-app`, run the following command:
+This project is currently **in progress**. We're actively working on implementing new features and improvements.
+
+---
+
+### **Next Steps:**
+
+- Finalize user authentication system
+- Implement messaging functionality
+- Improve UI/UX design
+- Conduct testing and bug fixes
+
+---
+
+![screenshot]()
+![screenshot]()
+
+## Key Features
+
+- User Profiles
+- User Authentication
+- Dark/Light mode
+- Connections and Networking
+- Messaging and Communication
+- Job Listings and Recruiting
+- Groups and Communities
+- Search and Discovery
+- Mobile-Friendly Design
+
+## How To Use
+
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
 ```bash
-npx create-next-app -e https://github.com/nextui-org/next-app-template
+# Clone this repository
+$ git clone https://github.com/sumit0o0/linkedin-frontend
+
+# Go into the repository
+$ cd linkedin-frontend
+
+# Install dependencies
+$ npm install
+
+# Run the app
+$ npm start
 ```
-
-### Install dependencies
-
-```bash
-npm install
-```
-
-### Run the development server
-
-```bash
-npm run dev
-```
-
-## License
-
-Licensed under the [MIT license](https://github.com/nextui-org/next-app-template/blob/main/LICENSE).
