@@ -31,8 +31,8 @@ This project is currently **in progress**. We're actively working on implementin
 
 ---
 
-![screenshot]()
-![screenshot]()
+![screenshot](https://github.com/Sumit0o0/linkedin-frontend/blob/master/screenshots/linkedin-frontend-light.png)
+![screenshot](https://github.com/Sumit0o0/linkedin-frontend/blob/master/screenshots/linkedin-frontend-dark.png)
 
 ## Key Features
 
