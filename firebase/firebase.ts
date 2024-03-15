@@ -4,14 +4,14 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDLVEEGOuTuzg16r2nJVhdMvOt6suLVTPQ",
-  authDomain: "intact-d64c0.firebaseapp.com",
-  projectId: "intact-d64c0",
-  storageBucket: "intact-d64c0.appspot.com",
-  messagingSenderId: "248168321381",
-  appId: "1:248168321381:web:36ebe7cd759c50c55e118c"
+  apiKey: process.env.FB_API_KEY,
+  authDomain: process.env.FB_AUTH_DOMAIN,
+  projectId: process.env.FB_PROJECT_ID,
+  storageBucket: process.env.FB_STORAGE_BUCKET,
+  messagingSenderId: process.env.FB_MESSAGING_SENDER_ID,
+  appId: process.env.FB_APP_ID,
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export default app
+export default app;
