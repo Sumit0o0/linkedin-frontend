@@ -10,7 +10,7 @@
 <p align="center">
   <a href="#key-features">Key Features</a> •
   <a href="#how-to-use">How To Use</a> •
-  <a href="https://intact-frontend.vercel.app/" target="_blank" color="blue">LIVE</a> •
+  <a href="https://intact-frontend.vercel.app/" target="_blank" color="blue">LIVE</a>
 </p>
 
 ## STATUS: WORK IN PROGRESS!
