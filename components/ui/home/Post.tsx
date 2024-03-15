@@ -36,7 +36,7 @@ export default function Post({
   date,
 }: Props) {
   return (
-    <section>
+    <section suppressHydrationWarning>
       <div className="p-4">
         <Link href={`/post/${id}`} className="block text-current">
           <div className="flex gap-3">

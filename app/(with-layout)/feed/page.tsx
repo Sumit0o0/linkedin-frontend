@@ -83,7 +83,7 @@ export default function Feed() {
               </Button>
             </div>
             <section className="my-6">
-              <Divider className="my-2 " />
+              <Divider className="my-2 " suppressHydrationWarning />
               {post.map((post, index) => (
                 <Post
                   key={post.id}
