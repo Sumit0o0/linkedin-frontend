@@ -92,5 +92,5 @@ function generateRandomPost() {
 
   return randomPost;
 }
-const posts = Array.from({ length: 10 }, () => generateRandomPost());
+const posts = Array.from({ length: 50 }, () => generateRandomPost());
 export default posts;

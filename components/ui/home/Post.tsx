@@ -40,19 +40,19 @@ export default function Post({
       <div className="p-4">
         <Link href={`/post/${id}`} className="block text-current">
           <div className="flex gap-3">
-            {/* <Link className="mt-0 mb-auto" href="#">
+            <Link className="mt-0 mb-auto" href="#">
               <Avatar src={avatar} alt="photo" />
-            </Link> */}
+            </Link>
             <div>
-              {/* <Link className="font-bold text-current" href="#">
+              <Link className="font-bold text-current" href="#">
                 {name}
-              </Link> */}
+              </Link>
               <p className="text-zinc-500">{title}</p>
               <p className="text-sm">{date}</p>
             </div>
           </div>
           <div className="context my-4">{context}</div>
-          {/* <div className="media  rounded-md">
+          <div className="media  rounded-md">
             <Suspense
               fallback={
                 <Skeleton className="rounded-lg">
@@ -70,7 +70,7 @@ export default function Post({
                 alt={title}
               />
             </Suspense>
-          </div> */}
+          </div>
           <div className="post-actions my-2">
             <div className="flex justify-between">
               <div className="">

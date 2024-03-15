@@ -12,7 +12,7 @@ import { RiPagesFill } from "react-icons/ri";
 import Link from "next/link";
 import React from "react";
 import Post from "@/components/ui/home/Post";
-import post from "@/utils/feed";
+import post from "@/utils/feed.json";
 import Footer from "@/components/Footer";
 
 export default function Feed() {
@@ -20,6 +20,7 @@ export default function Feed() {
   const handleShowMore = () => {
     setIsSM(!isSM);
   };
+
   return (
     <section className="">
       <section className="containerAuto my-6">
