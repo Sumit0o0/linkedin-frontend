@@ -7,7 +7,7 @@ import { Divider } from "@nextui-org/react";
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import React from "react";
-import { createUserWithEmail, getIdToken } from "@/firebase/auth";
+import { createUserWithEmail, google, github } from "@/firebase/auth";
 
 type Inputs = {
   email: string;
@@ -16,10 +16,6 @@ type Inputs = {
 
 export default function Form({ className }: { className?: string }) {
   const [show, setShow] = React.useState(false);
-
-  const google = async () => {};
-
-  const github = async () => {};
 
   const {
     register,

@@ -7,7 +7,7 @@ import { Button } from "@nextui-org/button";
 import { Divider } from "@nextui-org/react";
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
-import { signInWithEmail, getIdToken, google, github } from "@/firebase/auth";
+import { signInWithEmail, google, github } from "@/firebase/auth";
 
 type Inputs = {
   email: string;
@@ -25,8 +25,6 @@ export default function Form({ className }: { className?: string }) {
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     const user = await signInWithEmail(data.email, data.password);
     console.log(typeof user);
-    const token = await getIdToken(user);
-    console.log(token);
   };
 
   function handleShow() {

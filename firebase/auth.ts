@@ -59,20 +59,6 @@ export const github = async () => {
   }
 };
 
-export const getIdToken = async (user: any) => {
-  try {
-    const user = auth.currentUser;
-    if (user) {
-      const token = await user.getIdToken();
-      return token;
-    } else {
-      console.log("No user is signed in");
-    }
-  } catch (error) {
-    throw error;
-  }
-};
-
 export const signOut = async () => {
   try {
     await auth.signOut();

@@ -12,6 +12,7 @@ import { RiPagesFill } from "react-icons/ri";
 import Link from "next/link";
 import React from "react";
 import Post from "@/components/ui/home/Post";
+import post from "@/utils/feed";
 import Footer from "@/components/Footer";
 
 export default function Feed() {
@@ -19,7 +20,6 @@ export default function Feed() {
   const handleShowMore = () => {
     setIsSM(!isSM);
   };
-
   return (
     <section className="">
       <section className="containerAuto my-6">
@@ -82,9 +82,21 @@ export default function Feed() {
               </Button>
             </div>
             <section className="my-6">
-              <Divider className="my-2" />
-              {Array.from({ length: 10 }).map((_, index) => (
-                <Post key={index} />
+              <Divider className="my-2 " />
+              {post.map((post, index) => (
+                <Post
+                  key={post.id}
+                  id={post.id}
+                  avatar={post.avatar}
+                  name={post.name}
+                  title={post.title}
+                  context={post.context}
+                  likes={post.likes}
+                  dislikes={post.dislikes}
+                  comments={post.comments}
+                  image={post.image}
+                  date={post.date}
+                />
               ))}
             </section>
           </div>
