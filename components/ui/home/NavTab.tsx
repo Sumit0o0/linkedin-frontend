@@ -19,14 +19,14 @@ export default function NavTab() {
           <Tabs
             variant="underlined"
             aria-label="Tabs variants"
-            selectedKey={pathname || "home"}>
+            selectedKey={pathname || "feed"}>
             <Tab
-              key="home"
+              key="feed"
               className="p-0"
               title={
                 <Link
                   className="flex px-1 py-2 md:px-2 gap-1 items-center justify-center"
-                  href="/">
+                  href="/feed">
                   <HiMiniHome size={20} />
                   <span className="font-semibold">Home</span>
                 </Link>

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Divider } from "@nextui-org/divider";
 export default function Footer() {
   return (
-    <footer>
+    <footer className="py-2">
       <div className="flex flex-wrap justify-center gap-3">
         <Link href="#">About</Link>
         <Link href="#">Help</Link>

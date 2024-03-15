@@ -40,7 +40,7 @@ export const Navbar = () => {
     <Input
       aria-label="Search"
       classNames={{
-        inputWrapper: "rounded-md border py-0 w-full md:w-96",
+        inputWrapper: "rounded-md border py-0 w-full md:w-96 rounded-b-none",
         input: "text-sm rounded-sm",
       }}
       labelPlacement="outside"
@@ -51,6 +51,14 @@ export const Navbar = () => {
       type="search"
     />
   );
+
+  const SearchResults = () => {
+    return (
+      <div>
+        <Button>Button</Button>
+      </div>
+    );
+  };
 
   return (
     <NextUINavbar
@@ -63,7 +71,22 @@ export const Navbar = () => {
             <p className="font-extrabold text-inherit text-5xl pb-1">IN</p>
           </a>
         </NavbarBrand>
-        <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
+        <NavbarItem className="hidden lg:flex relative">
+          <div>{searchInput}</div>
+          <div className="absolute border rounded-b-md bg-default-100 right-0 left-0 top-10 hidden">
+            <ul className="py-2">
+              <li className="py-2 hover:bg-default-50 transition-all p-2">
+                <Link href="#">Link 1</Link>
+              </li>
+              <li className="py-2 hover:bg-default-50 transition-all p-2">
+                <Link href="#">Link 2</Link>
+              </li>
+              <li className="py-2 hover:bg-default-50 transition-all p-2">
+                <Link href="#">Link 3</Link>
+              </li>
+            </ul>
+          </div>
+        </NavbarItem>
       </NavbarContent>
 
       <NavbarContent

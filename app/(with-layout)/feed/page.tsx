@@ -14,7 +14,7 @@ import React from "react";
 import Post from "@/components/ui/home/Post";
 import Footer from "@/components/Footer";
 
-export default function Home() {
+export default function Feed() {
   const [isSM, setIsSM] = React.useState<boolean>(false);
   const handleShowMore = () => {
     setIsSM(!isSM);

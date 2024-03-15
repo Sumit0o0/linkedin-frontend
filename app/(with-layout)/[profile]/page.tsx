@@ -4,7 +4,7 @@ import { Link } from "@nextui-org/link";
 import { FaLocationArrow } from "react-icons/fa6";
 import { MdEdit } from "react-icons/md";
 import { Tooltip } from "@nextui-org/react";
-
+import { IoPersonAdd, IoAdd } from "react-icons/io5";
 export default function Profile() {
   return (
     <section>
@@ -48,15 +48,23 @@ export default function Profile() {
                 </div>
               </div>
               <div className="mt-4 flex flex-wrap gap-2">
-                {Array.from({ length: 4 }).map((_, i) => (
-                  <Button
-                    key={i}
-                    size="sm"
-                    variant="bordered"
-                    className="rounded-md">
-                    Add Profile Picture
-                  </Button>
-                ))}
+                <Button
+                  size="sm"
+                  variant="bordered"
+                  className="rounded-md"
+                  startContent={<IoPersonAdd />}>
+                  Intact
+                </Button>
+                <Button size="sm" variant="bordered" className="rounded-md">
+                  Message
+                </Button>
+                <Button
+                  size="sm"
+                  variant="bordered"
+                  className="rounded-md"
+                  startContent={<IoAdd />}>
+                  Follow
+                </Button>
               </div>
             </div>
           </div>
