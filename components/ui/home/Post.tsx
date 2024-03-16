@@ -1,4 +1,5 @@
 "use client";
+import React, { Suspense, useEffect } from "react";
 import { Avatar } from "@nextui-org/avatar";
 import { Link } from "@nextui-org/link";
 import { Divider } from "@nextui-org/divider";
@@ -8,7 +9,6 @@ import { FaShare } from "react-icons/fa";
 import { FiSend } from "react-icons/fi";
 import { Button } from "@nextui-org/button";
 import { Image, Skeleton } from "@nextui-org/react";
-import { Suspense } from "react";
 
 type Props = {
   id: number;
@@ -36,67 +36,62 @@ export default function Post({
   date,
 }: Props) {
   return (
-    <section suppressHydrationWarning>
-      <div className="p-4">
-        <Link href={`/post/${id}`} className="block text-current">
-          <div className="flex gap-3">
-            <Link className="mt-0 mb-auto" href="#">
-              <Avatar src={avatar} alt="photo" />
+    <>
+      <div className="my-6">
+        <div className="flex gap-3">
+          <Link href="#">
+            <Avatar src={avatar} />
+          </Link>
+          <div>
+            <Link href="#" className="text-current font-medium text-lg">
+              {name}
             </Link>
-            <div>
-              <Link className="font-bold text-current" href="#">
-                {name}
-              </Link>
-              <p className="text-zinc-500">{title}</p>
-              <p className="text-sm">{date}</p>
-            </div>
+            <span className="block">{title}</span>
+            <span className="block text-sm text-foreground-500">{date}</span>
           </div>
-          <div className="context my-4">{context}</div>
-          <div className="media  rounded-md">
-            <Suspense
-              fallback={
-                <Skeleton className="rounded-lg">
-                  <div className="w-[400px] h-[400px] rounded-lg bg-default-300"></div>
-                </Skeleton>
-              }>
-              <Image
-                src={image}
-                isBlurred
-                loading="lazy"
-                radius="lg"
-                width={600}
-                height={400}
-                className="bg-red-100 object-cover overflow-hidden "
-                alt={title}
-              />
-            </Suspense>
+        </div>
+        <div className="context my-4">
+          <Link className="text-current" href={`/feed/${id}`}>
+            {context}
+          </Link>
+        </div>
+        <div className="media bg-foreground-100">
+          <Link href={`/feed/${id}`} className="w-full">
+            <Image
+              src={image}
+              loading="lazy"
+              radius="lg"
+              isBlurred
+              className="rounded-none"
+              classNames={{
+                img: "",
+                wrapper: "flex max-h-[450px] mx-auto bg-foreground-500",
+              }}
+              alt={title}
+            />
+          </Link>
+        </div>
+        <div className="flex justify-between mt-3 p-1">
+          <div className="">
+            <Button variant="light" startContent={<GoThumbsup size={20} />}>
+              {likes || 0}
+            </Button>
+            <Button variant="light" startContent={<GoThumbsdown size={20} />}>
+              {dislikes || 0}
+            </Button>
+            <Button
+              variant="light"
+              startContent={<IoChatbubblesOutline size={20} />}>
+              {comments || 0}
+            </Button>
           </div>
-          <div className="post-actions my-2">
-            <div className="flex justify-between">
-              <div className="">
-                <Button variant="light" startContent={<GoThumbsup size={20} />}>
-                  {likes || 0}
-                </Button>
-                <Button
-                  variant="light"
-                  startContent={<GoThumbsdown size={20} />}>
-                  {dislikes || 0}
-                </Button>
-                <Button
-                  variant="light"
-                  startContent={<IoChatbubblesOutline size={20} />}>
-                  {comments || 0}
-                </Button>
-              </div>
-              <div>
-                <Button variant="light" startContent={<FaShare size={20} />} />
-                <Button variant="light" startContent={<FiSend size={20} />} />
-              </div>
-            </div>
+          <div>
+            <Button variant="light" startContent={<FaShare size={20} />} />
+            <Button variant="light" startContent={<FiSend size={20} />} />
           </div>
-        </Link>
+        </div>
       </div>
-      <Divider className="my-4" />
-    </section>
+      <Divider />
+    </>
   );
 }

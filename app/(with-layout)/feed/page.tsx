@@ -83,22 +83,24 @@ export default function Feed() {
               </Button>
             </div>
             <section className="my-6">
-              <Divider className="my-2 " suppressHydrationWarning />
-              {post.map((post, index) => (
-                <Post
-                  key={post.id}
-                  id={post.id}
-                  avatar={post.avatar}
-                  name={post.name}
-                  title={post.title}
-                  context={post.context}
-                  likes={post.likes}
-                  dislikes={post.dislikes}
-                  comments={post.comments}
-                  image={post.image}
-                  date={post.date}
-                />
-              ))}
+              <Divider className="my-2 " />
+              <div>
+                {post.map((post, index) => (
+                  <Post
+                    key={index}
+                    id={post.id + index}
+                    avatar={post.avatar}
+                    name={post.name}
+                    title={post.title}
+                    context={post.context}
+                    likes={post.likes}
+                    dislikes={post.dislikes}
+                    comments={post.comments}
+                    image={post.image}
+                    date={post.date}
+                  />
+                ))}
+              </div>
             </section>
           </div>
           <div className="md:order-1 col-span-12 md:col-span-3">

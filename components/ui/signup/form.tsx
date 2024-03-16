@@ -39,7 +39,7 @@ export default function Form({ className }: { className?: string }) {
             size="sm"
             label="Email"
             classNames={{
-              inputWrapper: `border-2 rounded-md ${
+              inputWrapper: `border-2 rounded ${
                 errors.email ? "border-red-500 border-s-4" : "border-s-2"
               }`,
               input: "font-semibold",
@@ -60,7 +60,7 @@ export default function Form({ className }: { className?: string }) {
               size="sm"
               label="Password"
               classNames={{
-                inputWrapper: `border-2 rounded-md ${
+                inputWrapper: `border-2 rounded ${
                   errors.password ? "border-red-500 border-s-4" : "border-s-2"
                 }`,
                 input: "pe-12 font-semibold",
@@ -72,7 +72,7 @@ export default function Form({ className }: { className?: string }) {
               type={show ? "password" : "text"}
             />
             <Button
-              className="min-w-fit absolute rounded-full p-3 right-2 top-1/2 transform -translate-y-1/2"
+              className="min-w-fit absolute rounded p-3 right-2 top-1/2 transform -translate-y-1/2"
               variant="light"
               onClick={handleShow}>
               {show ? <FaRegEyeSlash size={20} /> : <FaRegEye size={20} />}
@@ -85,7 +85,7 @@ export default function Form({ className }: { className?: string }) {
           )}
         </div>
         <div>
-          <Button className="w-full rounded-md" variant="shadow" type="submit">
+          <Button className="w-full rounded" variant="shadow" type="submit">
             Get Started
           </Button>
         </div>
@@ -93,7 +93,7 @@ export default function Form({ className }: { className?: string }) {
       <Divider className="my-8" />
       <div className="mb-3">
         <Button
-          className="rounded-md w-full"
+          className="rounded w-full"
           color="primary"
           variant="bordered"
           onClick={google}
@@ -103,7 +103,7 @@ export default function Form({ className }: { className?: string }) {
       </div>
       <div>
         <Button
-          className="rounded-md w-full"
+          className="rounded w-full"
           color="default"
           variant="bordered"
           onClick={github}
