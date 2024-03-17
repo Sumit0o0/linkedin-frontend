@@ -108,7 +108,7 @@ export default function Feed() {
             <div className="border rounded-md">
               <div className="relative">
                 <div className="w-full h-40 rounded-md">
-                  <Image
+                  <Avatar
                     src="https://i.pravatar.cc/300"
                     className="w-full h-full rounded-md object-cover"
                   />

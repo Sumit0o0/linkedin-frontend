@@ -10,7 +10,7 @@ export default function Card() {
       <div className="mx-auto text-center mb-4">
         <div className="relative mb-14">
           <div className="h-24">
-            <Image
+            <Avatar
               className="w-full h-full object-cover rounded-lg"
               src="https://i.pravatar.cc/300"
               alt="profile"
