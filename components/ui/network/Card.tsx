@@ -2,6 +2,7 @@ import { Avatar } from "@nextui-org/avatar";
 import { Button } from "@nextui-org/button";
 import { IoMdPersonAdd } from "react-icons/io";
 import Link from "next/link";
+import { Image } from "@nextui-org/react";
 
 export default function Card() {
   return (
@@ -9,7 +10,7 @@ export default function Card() {
       <div className="mx-auto text-center mb-4">
         <div className="relative mb-14">
           <div className="h-24">
-            <img
+            <Image
               className="w-full h-full object-cover rounded-lg"
               src="https://i.pravatar.cc/300"
               alt="profile"

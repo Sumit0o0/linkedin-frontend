@@ -3,7 +3,7 @@ import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
 import { FaLocationArrow } from "react-icons/fa6";
 import { MdEdit } from "react-icons/md";
-import { Tooltip } from "@nextui-org/react";
+import { Image, Tooltip } from "@nextui-org/react";
 import { IoPersonAdd, IoAdd } from "react-icons/io5";
 export default function Profile() {
   return (
@@ -13,7 +13,7 @@ export default function Profile() {
           <div className="order-last lg:order-first col-span-12 lg:col-span-9 p-4 border rounded-lg h-fit">
             <div>
               <div className="relative w-full h-48  mb-16 rounded-lg">
-                <img
+                <Image
                   className="w-full h-full object-cover rounded-lg"
                   src="https://i.pravatar.cc/300"
                 />

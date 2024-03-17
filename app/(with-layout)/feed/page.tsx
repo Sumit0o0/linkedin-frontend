@@ -14,6 +14,7 @@ import React from "react";
 import Post from "@/components/ui/home/Post";
 import post from "@/utils/feed.json";
 import Footer from "@/components/Footer";
+import { Image } from "@nextui-org/react";
 
 export default function Feed() {
   const [isSM, setIsSM] = React.useState<boolean>(false);
@@ -107,7 +108,7 @@ export default function Feed() {
             <div className="border rounded-md">
               <div className="relative">
                 <div className="w-full h-40 rounded-md">
-                  <img
+                  <Image
                     src="https://i.pravatar.cc/300"
                     className="w-full h-full rounded-md object-cover"
                   />
