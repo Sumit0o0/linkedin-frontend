@@ -30,7 +30,7 @@ export default function Home() {
             </div>
           </div>
           <div className="col-span-12 md:col-span-6 order-1 md:order-2">
-            <Image src={illustraion} alt="image" isBlurred />
+            <Image src="images/home_illustration.png" alt="image" isBlurred />
           </div>
         </div>
         <div className="mb-12">
