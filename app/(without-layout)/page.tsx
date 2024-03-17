@@ -11,6 +11,7 @@ import {
 } from "@nextui-org/react";
 import Form from "@/components/ui/signup/form";
 import Link from "next/link";
+const illustraion = "/home_illustration.png";
 export default function Home() {
   return (
     <section className="">
@@ -29,7 +30,7 @@ export default function Home() {
             </div>
           </div>
           <div className="col-span-12 md:col-span-6 order-1 md:order-2">
-            <Image src="/home_illustration.png" alt="image" />
+            <Image src={illustraion} alt="image" isBlurred />
           </div>
         </div>
         <div className="mb-12">
@@ -38,47 +39,39 @@ export default function Home() {
             Explore the world and Intact with people
           </h1>
           <div className="gap-6 grid grid-cols-12 grid-rows-2 mt-4">
-            <Card className="w-full h-[300px] col-span-12 sm:col-span-7 bg-gradient-to-br from-primary-500 to-primary-300">
-              <CardHeader className="absolute z-10 top-1 flex-col items-start">
-                <p className="text-tiny text-current uppercase font-bold">
-                  Your day your way
+            <Card className="w-full h-[300px] col-span-12 sm:col-span-7 bg-gradient-to-br from-foreground-50 to-foreground-100">
+              <CardBody className="flex justify-center items-center">
+                <p className={`${bowlbyOneSc.className} text-3xl`}>
+                  Search and Post Jobs
                 </p>
-                <h4 className="text-current font-medium text-xl">
-                  Your checklist for better sleep
-                </h4>
-              </CardHeader>
+              </CardBody>
             </Card>
-            <Card className="w-full h-[300px] col-span-12 sm:col-span-5 bg-gradient-to-br from-primary-500 to-primary-300">
-              <CardHeader className="absolute z-10 top-1 flex-col items-start">
-                <p className="text-tiny text-current uppercase font-bold">
-                  New
+            <Card className="w-full h-[300px] col-span-12 sm:col-span-5 bg-gradient-to-br from-foreground-50 to-foreground-100">
+              <CardBody className="flex justify-center items-center">
+                <p className={`${bowlbyOneSc.className} text-3xl`}>
+                  Intact with People
                 </p>
-                <h4 className="text-current font-medium text-2xl">
-                  Acme camera
-                </h4>
-              </CardHeader>
+              </CardBody>
             </Card>
-            <Card className="w-full h-[300px] col-span-12 sm:col-span-5 bg-gradient-to-br from-primary-500 to-primary-300">
-              <CardHeader className="absolute z-10 top-1 flex-col items-start">
-                <p className="text-tiny text-current uppercase font-bold">
-                  New
+            <Card className="w-full h-[300px] col-span-12 sm:col-span-5 bg-gradient-to-br from-foreground-50 to-foreground-100">
+              <CardBody className="flex justify-center items-center">
+                <p className={`${bowlbyOneSc.className} text-3xl`}>
+                  Show your talent
                 </p>
-                <h4 className="text-current font-medium text-2xl">
-                  Acme camera
-                </h4>
-              </CardHeader>
+              </CardBody>
             </Card>
-            <Card className="w-full h-[300px] col-span-12 sm:col-span-7 bg-gradient-to-br from-primary-500 to-primary-300">
-              <CardHeader className="absolute z-10 top-1 flex-col items-start">
-                <p className="text-tiny text-current uppercase font-bold">
-                  Your day your way
+            <Card className="w-full h-[300px] col-span-12 sm:col-span-7 bg-gradient-to-br from-foreground-50 to-foreground-100">
+              <CardBody className="flex justify-center items-center">
+                <p className={`${bowlbyOneSc.className} text-3xl`}>
+                  Professional Carrier with Intact
                 </p>
-                <h4 className="text-current font-medium text-xl">
-                  Your checklist for better sleep
-                </h4>
-              </CardHeader>
+              </CardBody>
             </Card>
           </div>
+        </div>
+        <div>
+          <h1
+            className={`${bowlbyOneSc.className} text-2xl text-primary-500 text-center`}></h1>
         </div>
       </section>
     </section>
