@@ -12,7 +12,22 @@ export default function Navbar() {
             <p className="font-extrabold text-inherit text-5xl pb-1">INTACT</p>
           </a>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center gap-x-3 ">
+          <Link
+            className="text-current font-medium hover:underline text-lg"
+            href="/feed">
+            Feed
+          </Link>
+          <Link
+            className="text-current font-medium hover:underline text-lg"
+            href="/signup">
+            Register
+          </Link>
+          <Link
+            className="text-current font-medium hover:underline text-lg"
+            href="/signin">
+            Signin
+          </Link>
           <ThemeSwitch />
         </div>
       </div>

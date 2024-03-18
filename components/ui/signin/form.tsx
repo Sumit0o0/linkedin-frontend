@@ -8,6 +8,7 @@ import { Divider } from "@nextui-org/react";
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import { signInWithEmail, google, github } from "@/firebase/auth";
+import { useRouter } from "next/navigation";
 
 type Inputs = {
   email: string;
@@ -15,6 +16,7 @@ type Inputs = {
 };
 
 export default function Form({ className }: { className?: string }) {
+  const router = useRouter();
   const [show, setShow] = React.useState(false);
   const {
     register,
@@ -22,10 +24,7 @@ export default function Form({ className }: { className?: string }) {
     formState: { errors },
   } = useForm<Inputs>();
 
-  const onSubmit: SubmitHandler<Inputs> = async (data) => {
-    const user = await signInWithEmail(data.email, data.password);
-    console.log(typeof user);
-  };
+  const onSubmit: SubmitHandler<Inputs> = async (data) => router.push("/feed");
 
   function handleShow() {
     setShow(!show);
@@ -96,7 +95,7 @@ export default function Form({ className }: { className?: string }) {
           className="rounded-md w-full"
           color="primary"
           variant="bordered"
-          onClick={google}
+          onClick={() => router.push("/feed")}
           startContent={<FaGoogle size={20} />}>
           Countinue with Google
         </Button>
@@ -106,7 +105,7 @@ export default function Form({ className }: { className?: string }) {
           className="rounded-md w-full"
           color="default"
           variant="bordered"
-          onClick={github}
+          onClick={() => router.push("/feed")}
           startContent={<FaGithub size={20} />}>
           Countinue with Github
         </Button>
